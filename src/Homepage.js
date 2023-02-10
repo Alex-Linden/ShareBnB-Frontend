@@ -1,5 +1,5 @@
-import React, { useContext, useState, useEffect } from "react";
-import userContext from "./UserContext";
+import React, { useState, useEffect } from "react";
+// import userContext from "./UserContext";
 import ShareBnBApi from "./api";
 import ListingCard from "./ListingCard";
 

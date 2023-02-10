@@ -12,18 +12,18 @@ const DEFAULT_DATA = {
   rating: "",
 };
 
-/** Form for sign-up
+/** Form for create listing
  * takes to logged in homepage if successful
- *  Displays error message if sign-up fails
+ *  Displays error message if creation fails
  *
  *  Props:
- *  - signup is a function from App
+ *  - create is a function from App
  *
  *  State:
  *  - formData
  *  - errorMessage
  *
- *  { App, Navigation } -> ListingForm
+ *  Navigation -> ListingForm
  *
  */
 
@@ -127,7 +127,7 @@ function ListingForm({ create }) {
       {errorMessages !== null &&
         <div className="alert"><p>{errorMessages}</p></div>}
       <button className="btn-primary btn btn-md LoginBtn">
-        Sign Up!
+        Create Listing!
       </button>
     </form>
   );

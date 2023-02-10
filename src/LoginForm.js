@@ -12,13 +12,13 @@ const DEFAULT_DATA = {
  *  Displays error message if login fails
  *
  *  Props:
- *  - login function from JoblyApp
+ *  - login function from App
  *
  *  State:
  *  - formData
  *  - errorMessages
  *
- *  { JoblyApp, Navigation } -> LoginForm
+ *   Navigation -> LoginForm
  *
  */
 function LoginForm({ login }) {
@@ -35,7 +35,7 @@ function LoginForm({ login }) {
 
   }
 
-   /** Call JoblyApp login function or
+   /** Call ShareBnBApi login function or
    * updateErrorMessage state */
   async function handleSubmit(evt) {
     evt.preventDefault();

@@ -69,6 +69,8 @@ class ShareBnBApi {
         return res.user;
     }
 
+    /** User login */
+
     static async login(data) {
         let res = await this.request(`login`, data, "post");
         this.token = res.token

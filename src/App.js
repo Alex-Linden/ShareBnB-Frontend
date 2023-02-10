@@ -8,6 +8,16 @@ import { BrowserRouter } from 'react-router-dom';
 import Navigation from './Navigation';
 import RouteList from './RouteList';
 
+/** App - wrapper
+ * 
+ * Props:
+ * -None
+ * 
+ * State:
+ * -Current User
+ * 
+ * App -> { Navigation, RouteList }
+ */
 function App() {
   const [currUser, setCurrUser] = useState({
     data: null,

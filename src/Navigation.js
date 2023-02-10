@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import {useContext} from "react";
 import UserContext from "./UserContext";
 
-/** navigation bar for the jobly appp
+/** navigation bar for the sharebnb app
  * renders on every page
  *
  * Navigation -> {homepage, Companies, Jobs}

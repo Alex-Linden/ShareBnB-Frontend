@@ -16,13 +16,13 @@ const DEFAULT_DATA = {
  *  Displays error message if sign-up fails
  *
  *  Props:
- *  - signup is a function from JoblyApp
+ *  - signup is a function from ShareBnBApp
  *
  *  State:
  *  - formData
  *  - errorMessage
  *
- *  { JoblyApp, Navigation } -> SignUpForm
+ *   Navigation -> SignUpForm
  *
  */
 
@@ -41,7 +41,7 @@ function SignUpForm({ signup }) {
 
   }
 
-  /** Call JoblyApp signup function or
+  /** Call ShareBnBApp signup function or
    * updateErrorMessage state */
   async function handleSubmit(evt) {
     evt.preventDefault();
