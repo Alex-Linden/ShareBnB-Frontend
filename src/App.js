@@ -77,8 +77,9 @@ function App() {
    *  - token to ""
    *
    */
-  async function logout(){
-
+  async function logout() {
+    setToken("");
+    setCurrUser({ data: null, infoLoaded: false });
   }
 
   return (
