@@ -78,7 +78,8 @@ function App() {
    *
    */
   async function logout() {
-    setToken("");
+    const token = ShareBnBApi.logOut()
+    setToken(token);
     setCurrUser({ data: null, infoLoaded: false });
   }
 
@@ -86,8 +87,8 @@ function App() {
     <div className="App">
       <UserContext.Provider value={{ currUser, token }}>
         <BrowserRouter>
-          <Navigation />
-          <RouteList login={login} signup={signup} create={create} logout={logout} />
+          <Navigation logout={logout} />
+          <RouteList login={login} signup={signup} create={create} />
         </BrowserRouter>
       </UserContext.Provider>
     </div>
