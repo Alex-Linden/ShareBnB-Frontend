@@ -87,7 +87,7 @@ function App() {
       <UserContext.Provider value={{ currUser, token }}>
         <BrowserRouter>
           <Navigation />
-          <RouteList login={login} signup={signup} create={create} />
+          <RouteList login={login} signup={signup} create={create} logout={logout} />
         </BrowserRouter>
       </UserContext.Provider>
     </div>

@@ -20,21 +20,21 @@ class ShareBnBApi {
         const url = `${BASE_URL}/${endpoint}`;
         const headers = { Authorization: `Bearer ${ShareBnBApi.token}` };
         const params = (method === "get")
-          ? data
-          : {};
+            ? data
+            : {};
 
         try {
-          return (await axios({ url, method, data, params, headers })).data;
+            return (await axios({ url, method, data, params, headers })).data;
         } catch (err) {
-          console.error("API Error:", err.response);
-          let message = err.response.data.error.message;
-          throw Array.isArray(message) ? message : [message];
+            console.error("API Error:", err.response);
+            let message = err.response.data.error.message;
+            throw Array.isArray(message) ? message : [message];
         }
     }
 
     // Individual API Routes
-//#####################################################################
-// LISTING ROUTES
+    //#####################################################################
+    // LISTING ROUTES
 
     /** Get listings */
 
@@ -58,14 +58,14 @@ class ShareBnBApi {
     }
 
 
-//#####################################################################
-// USER ROUTES
+    //#####################################################################
+    // USER ROUTES
 
     /** User signup */
 
     static async signup(data) {
         let res = await this.request(`signup`, data, "post");
-        this.token = res.token
+        this.token = res.token;
         return res.user;
     }
 
@@ -73,8 +73,14 @@ class ShareBnBApi {
 
     static async login(data) {
         let res = await this.request(`login`, data, "post");
-        this.token = res.token
+        this.token = res.token;
         return res.user;
+    }
+
+    /** logs user out and sets this.token to null */
+    static logOut() {
+        this.token = null;
+        return this.token;
     }
 }
 
